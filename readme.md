@@ -3,7 +3,7 @@
 
 A basic pomodoro timer app built for the freeCodeCamp front-end development certificate.
 
-Please check out a live build [here](https://aaronishibashi/portfolio/web/pomotimer)
+Please check out a live build [here](https://aaronishibashi.com/portfolio/web/pomotimer)
 
 ## Tools
 - React, front-end library

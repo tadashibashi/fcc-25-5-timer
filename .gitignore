@@ -2,6 +2,7 @@
 dist/*
 !dist/index.html
 !dist/alarm.wav
+!dist/icon.png
 
 # Dev
 node_modules/

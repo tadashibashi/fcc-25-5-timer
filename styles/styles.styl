@@ -1,0 +1,168 @@
+user-select(n)
+    -webkit-user-select: n
+    -moz-user-select: n
+    -ms-user-select: n
+    user-select: n
+
+html
+    font-family: Arial, Helvetica, sans-serif
+    background: linear-gradient(90deg, gray, lightgray),
+        linear-gradient(180deg, gray, lightgray)
+    height: 100vh
+    box-sizing: border-box
+
+
+$border-color = rgb(150, 54, 54)
+$button-border-color = gray
+
+// Drawing
+.greenery
+    position: relative
+    .leaf
+        position: absolute
+        background-color: green
+        //border: 1px rgb(0, 112, 0) solid
+
+    .leaf.right
+        left: 50%
+        top: -10px
+        border-radius: 0 200px 0 200px
+        width: 64px
+        height: 26px
+        z-index: 0
+
+    .leaf.left
+        left: 31%
+        top: -11px
+        width: 64px
+        height: 26px
+        transform: rotate(180deg)
+        border-radius: 200px 0
+        z-index: 0
+
+    .leaf.center.left
+        width: 40px
+        height: 32px
+        left: 39%
+        top: -8px
+        transform: rotate(170deg)
+        border-radius: 200px 0
+        z-index: 1
+    .leaf.center.right
+        width: 40px
+        height: 32px
+        left: 48%
+        top: -9px
+        transform: rotate(80deg)
+        border-radius: 200px 0
+        z-index: 2
+    .leaf.stem
+        width: 16px
+        height: 20px
+        left: 47%
+        top: -20px
+        z-index: 1
+        border-radius: 5px
+
+    
+
+// Overall container
+#app-container
+    background-color: rgba(255, 109, 109, 0.43)
+    border: 10px $border-color solid
+    border-radius: 36% 36% 50% 50%
+    width: max(80%, 400px)
+    margin: 10vh auto 0 auto
+    user-select(none)
+    cursor: default
+
+// Main header 
+h1
+    text-align: center
+
+    margin-top: 2rem
+
+// Session lengths ui
+#length-settings
+    display: flex
+    column-gap: 4rem
+    width: 400px
+    margin: 0 auto
+    justify-content: center
+
+    .length-setting
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr
+        grid-template-rows: 1fr 1fr
+        align-items: center
+        justify-content: center
+        width: 120px
+        height: 60px
+
+
+        // title
+        .label
+            grid-row: 1
+            grid-column: 1 / -1
+            display: block
+            text-align: center
+            font-family: Verdana
+            font-size: .8rem
+            margin-bottom: -10px
+            text-justify: inter-character
+
+        // inc-dec buttons
+        button
+            grid-row: 2
+            font-weight: bold
+
+        
+        button.dec
+            grid-column: 1
+        
+        button.inc
+            grid-column: 3
+
+        // time display
+        p
+            grid-row: 2
+            grid-column: 2
+            text-align: center
+
+// Time display
+#display
+    margin: 1rem auto
+    text-align: center
+    border: 4px $border-color solid
+    border-radius: 4%
+    width: 100px
+    height: 80px
+    padding: .5rem
+    background-color: $button-color
+
+    div
+        padding-bottom: 1rem
+#timer-label
+    font-weight: bold
+    font-size: 1.4rem
+#time-left
+    font-weight: bold
+    font-size: 2rem
+
+// Two buttons on the bottom
+#controls
+    margin: 0 auto 2rem auto
+    width: auto
+    display: flex
+    align-content: center
+    justify-content: center
+    column-gap: .5rem
+        
+button
+    height: 1.2rem
+    border: 1px solid $button-border-color
+    border-radius: 40%
+
+    &:active
+        background-color: rgb(225, 225, 225)
+        color: gray

@@ -1,0 +1,10 @@
+# Build folder
+dist/*
+!dist/index.html
+!dist/alarm.wav
+
+# Dev
+node_modules/
+
+# OS
+.DS_Store
